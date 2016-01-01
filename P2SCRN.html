@@ -2,146 +2,19 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" href="C:/Media/Dropbox/Projects/reset.css" />
-		<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
-		<!--<link rel="stylesheet" type="text/css" href="style.css" />-->
-		<style>
-			html {
-				background: #6F6F6F;
-				font-family: 'Play', sans-serif;
-				font-weight: 300;
-				font-size: 1.1em;
-			}
-			
-			div {
-				border-top: 2px solid #777;
-				border-bottom: 2px solid #888;
-				background: #555;
-				padding: 20px;
-				margin: 0 auto;
-			}
-			
-			#screen {
-				height: 600px;
-				padding: 0px;
-				border: 20px solid #345 /*#2F2F4F*/;
-				border-right: 0;
-				background: #345;
-				min-width: 236px;
-				max-width: 900px;
-				overflow: scroll;
-				overflow-x:hidden;
-			}
-			
-			h1 {
-				padding: 0.5em 0 0.3em 0;
-				font-size: 1.6em;
-				font-weight: 400;
-				text-align: center;
-				color: #444;
-			}
-			
-			p {
-				display: inline;
-				text-shadow: 0px 0px 1px #0FF;
-				line-height: 1.4em;
-				color: #C0FDFD;
-				white-space: pre-line;
-			}
-			
-			em {
-				font-style: italic;
-				color: #FEFEFE;
-			}
-			
-			::-webkit-scrollbar {
-			  width: 18px;
-			  height: 18px;
-			}
-			
-			::-webkit-scrollbar-button {
-			  width: 0px;
-			  height: 0px;
-			}
-			
-			::-webkit-scrollbar-thumb {
-			  background: #394959;
-			  border: 0px none #ffffff;
-			  border-radius: 0px;
-			}
-			
-			::-webkit-scrollbar-thumb:hover {
-			  background: #456;
-			}
-			
-			::-webkit-scrollbar-thumb:active {
-			  background: #456;
-			}
-			
-			::-webkit-scrollbar-track {
-			  background: #345;
-			  border: 0px none #345;
-			  border-radius: 0px;
-			}
-			
-			::-webkit-scrollbar-track:hover {
-			  background: #345;
-			}
-			
-			::-webkit-scrollbar-track:active {
-			  background: #345;
-			}
-			
-			::-webkit-scrollbar-corner {
-			  background: transparent;
-			}
-		</style>
+		<link href="reset.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,300italic,400italic,700" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet" />
+		<script src="P2SCRN.js" rel="javascript"></script>
+		<script src="gameFile.js" rel="javascript"></script>
 		<title>P2SCRN.js</title>
 	</head>
 	<body>
-		<h1>You sit down...</h1>
-		<div>
+		<h1 id="title">Default</h1>
+		<div class="container">
 			<div id="screen">
-				<p></p><p id="cursor"> _</p>
 			</div>
 		</div>
-		<!--<script src="main.js"></script>-->
-		
-		<script>
-		function P2SCRN (text, index) {
-			if (!index) {
-				index = 0;
-			}
-			else if (!text[index]) {
-				return;
-			}
-			setTimeout(function () {
-				if (text[index] === '*') {
-					if (!P2SCRN.emTgl) {
-						P2SCRN.latest = document.createElement('em');
-					}
-					else {
-						P2SCRN.latest = document.createElement('p');
-					}
-					P2SCRN.scrn.insertBefore(P2SCRN.latest, P2SCRN.crsr);
-					P2SCRN.op = P2SCRN.latest;
-					P2SCRN.emTgl = !P2SCRN.emTgl;
-				}
-				else {
-					P2SCRN.op.textContent += text[index];
-				}
-				P2SCRN.scrn.scrollTop = P2SCRN.scrn.scrollHeight;
-				return P2SCRN(text, ++index);
-			}, 10/*default: 10*/ + Math.floor( Math.random() * 21 ));
-		}
-		P2SCRN.scrn = document.getElementById('screen');
-		P2SCRN.op = P2SCRN.scrn.getElementsByTagName('p')[0];
-		P2SCRN.crsr = document.getElementById('cursor');
-		P2SCRN.latest = P2SCRN.op;
-		P2SCRN.emTgl = false;
-		
-		P2SCRN("... at the table your gaze down. The tablecloth is a bit bland, but somehow rich, you can't quite grasp what makes it seem so. Someone clears their throat. You look up to meet the gaze of a waiter smiling down at you.\n\n *Here's your coffee, the first cup is on the house for our valued customer,*\n\n the waiter says cheerfully. There's a slight monotonous gait to the waiter's voice. ");
-		
-		</script>
+		<h5>click on the screen</h5>
 	</body>
 </html>

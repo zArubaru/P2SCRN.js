@@ -1,0 +1,116 @@
+html {
+	font-family: 'Play', sans-serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	background: #222;
+}
+
+div {
+	padding: 20px;
+	margin: 0 auto;
+	border-top: 2px solid #292929;
+	border-bottom: 2px solid #333;
+	background: #111;
+}
+
+#screen {
+	min-width: 236px;
+	max-width: 900px;
+	height: 600px;
+	padding: 0;
+	border: 20px solid #345;
+	border-right: 0;
+	background: #345;
+	overflow: scroll;
+	overflow-x:hidden;
+}
+
+h1 {
+	padding: .5em 0 .3em 0;
+	font-size: 1.6em;
+	font-weight: 400;
+	text-align: center;
+	color: #9CD;
+}
+
+h5 {
+	display: block;
+	min-width: 256px;
+	max-width: 920px;
+	padding-left: 10px;
+	margin: 10px auto;
+	color: #111;
+}
+
+p {
+	display: inline;
+	white-space: pre-line;
+}
+
+p, span {
+	line-height: 1.4em;
+	text-shadow: 0 0 1px #0FF;
+	color: #C0FDFD;
+}
+
+span:hover {
+	cursor: pointer;
+	color: #FEFEFE;
+}
+
+em {
+	font-style: italic;
+	color: #FEFEFE;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0 none #ffffff;
+  border-radius: 0;
+  background: #394959;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #456;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #456;
+}
+
+::-webkit-scrollbar-track {
+  border: 0 none #345;
+  border-radius: 0;
+  background: #345;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #345;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #345;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media screen and (max-width: 600px) {
+	
+	html, body, .container {
+		height: 100%;
+	}
+	#screen {
+		height: 75%;
+	}
+}
