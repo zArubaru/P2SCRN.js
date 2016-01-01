@@ -9,7 +9,7 @@ For a very basic test, you can try subsitutin the file's contents for this:
 
 	var p;
 	window.onload = function () {
-		p = new P2SCRN(5, "You sit down...", tree);
+		p = new P2SCRN(5, "hello, world", tree);
 		p.init(); 
 		p.prnt("hello, world\n");
 	}
