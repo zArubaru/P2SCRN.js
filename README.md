@@ -1,6 +1,6 @@
 # P2SCRN.js
 
-A simple interactive fiction engine, started as my final project for Harvard's CS50x.
+An interactive fiction engine, created as my final project for Harvard's CS50x.
 I would like to continue developing this farther in the future. :-)
 
 If you want to try messing around with the engine, I suggest starting at the file: gameFile.js.
